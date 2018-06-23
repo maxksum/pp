@@ -1,0 +1,457 @@
+@import 'nav-icon.css';
+#headline h1 {
+  font-size: 58px;
+  color: white;
+  margin: 0px;
+  letter-spacing: 3px;
+}
+#headline h2 {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+width: 100%;
+     height: 100%;
+	/* Путь к изображению относительно данного файла */
+    background-image: url(img/cv.jpg);
+    /* Центрирование изображения по вертикали и горизонтали всегда */
+    background-position: center center;
+    /* Запрещаем повтор изображения */
+    background-repeat: no-repeat;
+    /* Фиксируем изображение - оно остается на месте при прокрутке окна */
+    background-attachment: fixed;
+    /* Изображение будет масштабироваться в зависимости от размеров контейнера */
+    background-size: cover;
+    /* Цвет фона изображения, который будет показываться пока изображение не загрузится */
+    background-color:#464646;
+    /* Эквивалентная сокращенная запись
+    * background: url(background-photo.jpg) center center cover no-repeat fixed;
+    */
+
+    max-width:1400px;
+	height: auto !important;
+}
+
+#headline-wrapper {
+  padding: 40px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Lato;
+  color: white;
+  font-weight: 300;
+  letter-spacing:2px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+h1 {font-size: 30px;}
+h2 {font-size: 20px;}
+h3 {font-size: 24px;}
+
+.flex-center-wrapper {
+  display: flex;
+  display: -webkit-flex;
+  align-content: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  text-align: center;
+}
+
+
+.flex-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.flex-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.slider-toggle {
+	display: block;
+	margin: 10px 15px 10px 15px;
+	color: white;
+	font-size: 18px;
+	border: none;
+  letter-spacing: 1px;
+  font-family: Lato;
+  width: 50px;
+  height: 20px;
+  border-radius: 100px;
+  text-align: center;
+  background-color: rgb(43, 57, 69);
+  transition: background-color 0.5s;
+}
+
+
+
+.selected {
+    background-color: rgb(18, 209, 234);
+}
+
+.sliding-menu {
+  background-color: rgb(40, 38, 38);
+  visibility: hidden;
+  position: fixed;
+  overflow: hidden;
+}
+
+.sliding-menu a, .sliding-menu p {
+  font-family: Lato;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 18px;
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.sliding-menu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.sliding-menu li {
+  margin: 40px auto 40px auto;
+}
+
+.sliding-menu hr {
+  width: 50%;
+  min-width: 100px;
+  border-color: rgb(18, 209, 234);
+}
+
+.exit {
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.left-exit, .top-exit, .bottom-exit {
+  top: 20px;
+  right: 40px;
+}
+
+.right-exit {
+  top: 20px;
+  left: 40px;
+}
+
+.buttons-container {
+  max-width: 700px;
+  margin: 0 auto 0 auto;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.note {
+  position: absolute;
+  width: 250px;
+}
+
+.left-note {
+  bottom: 3%;
+  left: 5%;
+}
+
+.right-note {
+  bottom: 10%;
+  right: 5%;
+}
+
+.top-note {
+  top: 3%;
+  right: 5%;
+}
+
+.topleft-note {
+  position: fixed;
+  top: 75px;
+  left: 45px;
+}
+
+.bottom-note {
+  bottom: 5%;
+  right: 3%;
+}
+
+#demo-note p {
+  text-align: left;
+  font-family: Gochi Hand;
+  font-size: 18px;
+  color: white;
+  margin: 5px 15px;
+}
+
+.note p {
+  font-family: Gochi Hand;
+  font-size: 18px;
+  color: white;
+  margin: 20px;
+  width: 200px;
+  position: static;
+  display: inline-block;
+}
+
+.arrow {
+  fill: white;
+  height: 25px;
+  width: 25px;
+  margin: 0 auto 0 auto;
+  display: inline-block;
+}
+
+.top-arrow {
+  -webkit-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.topleft-arrow {
+  -webkit-transform: rotateZ(205deg);
+  -ms-transform: rotateZ(205deg);
+  transform: rotateZ(205deg);
+}
+
+.right-arrow {
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+
+.bottom-arrow {
+  -webkit-transform: rotateZ(-90deg);
+  -ms-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
+}
+
+.left-menu, .right-menu {width: 300px;}
+.top-menu {height: 100%;}
+.bottom-menu {height:100px;}
+
+.rotate {
+  -webkit-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+.display-off {
+  display: none;
+}
+
+.newsletter-signup span {
+  margin: 10px 20px;
+  font-weight: 300;
+  color: white;
+  font-family: Lato;
+  letter-spacing: 0.5px;
+}
+
+.newsletter-signup input {
+  padding: 10px 20px;
+  border: 0;
+}
+
+.cta {
+  background-color: rgb(18, 209, 234);
+  font-family: Lato;
+  color: white;
+  padding: 10px 20px;
+  border: 0;
+  margin: 0 10px;
+}
+
+.social {
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  width: 80px;
+}
+
+.social:hover {
+  background-color: rgb(67, 118, 129)
+}
+
+@media only screen and (max-width: 600px)
+{
+  .bottom-menu {
+    height: 200px
+  }
+
+  .newsletter-signup input {
+    display: block;
+    width: 150px;
+    margin: 15px auto;
+    padding: 10px 0;
+  }
+
+  .newsletter-signup button {
+    width: 150px;
+    margin: auto;
+  }
+
+  h1 {
+  	font-size: 32px;
+  }
+
+  h2 {
+  	font-size: 20px;
+  }
+
+  .buttons-container span {
+  	font-size: 14px;
+  }
+
+  .note p, #demo-note p {
+  	font-size: 14px;
+  }
+
+  .left-menu, .right-menu {
+    width: 270px
+  }
+
+}
+
+/* Box colors */
+
+
+
+/* Common button styles */
+.button1 {
+	float: left;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.button1:focus {
+	outline: none;
+}
+.button1 > span {
+	vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-2 .button1 {
+	color: #ECEFF1;
+	border-color: #ECEFF1;
+}
+
+/* Sizes */
+.button--size-s1 {
+	font-size: 14px;
+}
+.button--size-m1 {
+	font-size: 16px;
+}
+.button--size-l1 {
+	font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper1 {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.button--text-thin1 {
+	font-weight: 300;
+}
+.button--text-medium1 {
+	font-weight: 500;
+}
+.button--text-thick1 {
+	font-weight: 600;
+}
+.button--round-s1 {
+	border-radius: 5px;
+}
+.button--round-m1 {
+	border-radius: 15px;
+}
+.button--round-l1 {
+	border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin1 {
+	border: 1px solid;
+}
+.button--border-medium1 {
+	border: 2px solid;
+}
+.button--border-thick1 {
+	border: 3px solid;
+}
+
+/* Ujarak */
+.button--ujarak1 {
+	-webkit-transition: border-color 0.4s, color 0.4s;
+	transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #37474f;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transform: scale3d(0.7, 1, 1);
+	transform: scale3d(0.7, 1, 1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak1.button--round-s1::before {
+	border-radius: 2px;
+}
+.button--ujarak1.button--inverted1::before {
+	background: #7986CB;
+}
+.button--ujarak1,
+.button--ujarak1::before {
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak1:hover {
+	color: #fff;
+	border-color: #37474f;
+}
+.button--ujarak1.button--inverted1:hover {
+	color: #37474F;
+	border-color: #fff;
+}
+.button--ujarak1:hover::before {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
